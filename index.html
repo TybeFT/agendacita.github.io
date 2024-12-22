@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado (titulo) -->
+        <header>
+            <h1>AGENDA 2025</h1>
+            <img src="agenda1.png" alt="icono-agenda" class="agenda-imagen">
+        </header>
+
+        <!-- Navegador -->
+        <nav>
+            <a href="#inicio"> Inicio </a> 
+            <a href="#agendar"> Agendar Citas </a> 
+            <a href="#consultar"> Consultar Citas</a>
+        </nav>
+
+        <main>
+            <!-- INICIO -->
+            <section id="inicio" class="section">
+                <h2>Inicio</h2>
+                <p>Bienvenido a tu agenda de citas. </p> 
+                <p>Aqui podras configurar, agregar o eliminar todo tipo de reuniones o citas importantes que tengas. Solo cubre los datos que solicita cada cita y guardala.</p>
+            </section>
+
+            <!-- AGENDAR -->
+            <section id="agendar" class="section">
+                <h2>Agendar Citas Aqui</h2>
+                <form id="formulario-agendar">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" required>
+                
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" onclick="abrirSelectorFecha()" required>
+
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" onclick="abrirSelectorHora()" required>
+                
+                    <button type="submit"> Guardar </button>
+                </form>
+
+                <!-- Boton reset -->
+                <button id="resetearCitas">Reset</button>
+
+                <div id="mensaje-exito"></div>
+            </section>
+
+            <!-- CONSULTAR -->
+            <section id="consultar" class="section">
+                <h2>Consultar Citas</h2>
+                <p>Esta sección mostrará las citas existentes.</p>
+            </section>
+        </main>
+
+        <!-- Pie de pagina -->
+        <footer>
+           &copy; 2024 Agenda de citas. By: Miguel Correa.
+        </footer>
+    </div>
+
+     <!-- SCRIPT de funcionamiento -->
+     <script src="script.js"></script>
+</body>
+</html>

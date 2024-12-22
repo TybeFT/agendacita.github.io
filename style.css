@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background-color: #BA9D79;
+    padding: 20px 0;
+    color: white;
+}
+
+.agenda-imagen {
+    width: 50px;
+    height: 50px;
+}
+
+.agenda-imagen:hover {
+    transition: all 0.3s ease;
+    width: 60px;
+    height: 60px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px
+}
+
+nav {
+    background-color: #E3CDAE;
+    padding: 10px 0;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 2px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ba9d798a;
+    border-radius: 8px;
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2rem;
+}
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.section {
+    border: 2px solid #ccc;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.seccion-cita {
+    flex: 1 0 calc(49% - 10px); /*ajusta el ancho de cada cita*/
+    min-width: 250px;
+    max-width: 400px;
+    background-color: #E3CDAE;
+    border: none;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+#consultar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#agendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#agendar form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#agendar input[type="text"],
+#agendar input[type="date"],
+#agendar input[type="time"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#agendar button[type="submit"] {
+    width: 100%;
+    background-color: #312f2e;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#agendar button:hover {
+    background-color: #ff9800;
+}
+
+#mensaje-exito {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#resetearCitas {
+    width: 18.4%;
+    background-color: #312f2e;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#resetearCitas:hover {
+    background-color: #ff9800;
+}
+
+#consultar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#consultar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#consultar li {
+    margin-bottom: 10px;
+}
+
+.alta-cita {
+    background-color: #ff9800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.alta-cita:hover {
+    background-color: #BA9D79;
+}
+
+.alta-cita:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Media para dispositivo movil*/
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    main {
+        grid-template-columns: 100%;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+}
